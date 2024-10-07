@@ -30,8 +30,6 @@ jobs:
         run: |
           KV_NAMESPACE="SUBLINK_KV"
           echo "Checking for KV namespace: $KV_NAMESPACE"
-          npx wrangler kv namespace list
-          wrangler kv namespace list
           LIST_OUTPUT=$(wrangler kv namespace list)
           echo "KV namespace list output: $LIST_OUTPUT"
           
