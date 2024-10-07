@@ -29,6 +29,8 @@ jobs:
           CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CF_ACCOUNT_ID }}
         run: |
           KV_NAMESPACE="SUBLINK_KV"
+          echo "$CLOUDFLARE_API_TOKEN"
+          echo "$CLOUDFLARE_ACCOUNT_ID"
           echo "Checking for KV namespace: $KV_NAMESPACE"
           npx wrangler kv namespace list
           wrangler kv namespace list
